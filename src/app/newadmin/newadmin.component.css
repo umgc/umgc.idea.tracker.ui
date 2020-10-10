@@ -1,0 +1,37 @@
+.form{
+    margin-right: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    
+    box-shadow: 12px 12px 22px grey;
+    margin-bottom: 20px;
+  
+    
+  }
+  
+  .form-header{
+      
+      border: 1px solid brown;
+      margin-bottom: 10px;
+      background-color: #960513;
+      border-radius: 10px;
+      padding-bottom: 10px;
+      
+  
+  }
+  h3{
+    color:yellow;
+    text-align: center;
+}
+.btn{
+    margin-right: 5px;
+}
+.login-container{
+    margin-left: 300px;
+    width: 1000px;
+   
+    
+}
