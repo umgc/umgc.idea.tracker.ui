@@ -1,0 +1,29 @@
+<h2>Project List</h2>
+<table class ="table table-striped">
+    <thead>
+        <tr>
+            <th>Project Title</th>
+            <th>Project Description</th>
+            <th>Project Website</th>
+            <th>Comment</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let project of projects">
+            <td>{{project.project_title}}</td>
+            <td>{{project.project_description}}</td>
+            <td>{{project.project_website}}</td>
+            <td>{{project.comment}}</td>
+            <td>
+                <button (click) = "updateProject(project.id)" class ="btn btn-info">Update</button>
+                <button (click) = "deleteProject(project.id)" class ="btn btn-danger" style="margin-left:10px">Delete</button>
+                <button (click) = "ProjectDetails(project.id)" class ="btn btn-primary" style="margin-left:10px">View</button>
+            </td>
+
+        </tr>
+
+    </tbody>
+
+
+</table>

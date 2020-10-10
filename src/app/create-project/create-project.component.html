@@ -1,0 +1,31 @@
+<div class="col-md-12  ">
+
+
+<form  (ngSubmit) ="onSubmit()">
+    
+    <div class="col-md-12 form-group  form-inline " >
+        <label class="col-sm-6 col-form-label" for="projectTitle" >Project Title: </label>
+        <input type="text" class = "form-control" id="ex3"
+            [(ngModel)] = "project.project_title" name ="project_title">
+    </div>
+    <div class="col-md-12 form-group form-inline">
+        <label class="col-sm-6 col-form-label" for="projectDescription">Project Description</label>
+        <input type="text" class = "form-control" id = "project_description"
+            [(ngModel)] = "project.project_description" name ="project_description">
+    </div>
+    <div class="col-md-12 form-group form-inline">
+        <label class="col-sm-6 col-form-label" for="projectWeb">Project Website</label>
+        <input type="text" class = "form-control" id = "project_website"
+            [(ngModel)] = "project.project_website" name ="project_website">
+    </div>
+    <div class="col-md-12 form-group form-inline">
+        <label class="col-sm-6 col-form-label" for="Comment">Comment</label>
+        <input type="text" class = "form-control" id = "comment"
+            [(ngModel)] = "project.comment" name ="comment">
+    </div>
+    
+    
+  <button class="btn btn-success" type="submit">Submit</button>
+
+</form>
+</div>
