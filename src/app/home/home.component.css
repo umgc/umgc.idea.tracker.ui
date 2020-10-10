@@ -1,0 +1,84 @@
+.form{
+    
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 12px 12px 22px grey;
+    margin-bottom: 20px;
+  
+  }
+  .thired-row{
+  
+    margin-right: 1px;
+  }
+  .bottom-imageone{
+    margin-top: 25px;
+    margin-left: 15px;
+     
+  }
+  .bottomtwo{
+    margin-left: 80px;
+    margin-top: 5px
+  }
+  .aboutbody{
+    background-color: white;
+    text-align: center;
+  }
+  .ampol{
+    margin-top: 5px;
+    
+  }
+  .ampol img{
+      height: 500px;
+      
+    }
+    h2{
+        margin-top: 60px;
+    }
+  p{
+    line-height: 2;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+  }
+  .capp{
+    margin-top: 20px;
+  }
+  
+  .form-header{
+      
+      border: 1px solid brown;
+      margin-bottom: 10px;
+      background-color: #960513;
+      border-radius: 10px;
+      padding-bottom: 10px;
+  }
+  label {
+    /* Other styling... */
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+}
+  h3{
+    color:yellow;
+}
+.btn{
+    margin-right: 5px;
+}
+.form-check-label{
+    text-align: center;
+  }
+  h4{
+    text-align: center;
+    color: yellow;
+    
+  }
+  .capp{
+    margin-top: -55px;
+  }
+  strong{
+    text-align: center;
+  }

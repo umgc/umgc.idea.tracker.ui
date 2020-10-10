@@ -1,0 +1,20 @@
+.signin form{
+    width:300px;
+   margin-left: 350px;
+   
+   background-color: #960513;
+   padding: 20px;
+  }
+  h3{
+    background-color: #960513;
+    padding: 10px;
+    width:300px;
+    margin-left: 350px;
+    
+  }
+  .form-group a{
+    color: #f1f1f1;
+  }
+  .btn-primary{
+    width: 260px;
+  }
