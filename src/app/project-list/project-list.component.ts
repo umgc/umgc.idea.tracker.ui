@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {Project} from '../project'
+import {project} from '../project'
 import { ProjectService } from '../project.service';
 @Component({
   selector: 'app-project-list',
@@ -9,7 +9,7 @@ import { ProjectService } from '../project.service';
 })
 export class ProjectListComponent implements OnInit {
 
-  projects: Project[];
+  projects: project[];
 
   constructor(private projectService: ProjectService, private router: Router) { }
 

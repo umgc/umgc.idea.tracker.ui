@@ -1,4 +1,4 @@
-<h2>FAQ</h2>
+<!-- <h2>FAQ</h2>
 <table class = "table table-striped">
     <thead>
         <th>Question</th>
@@ -9,10 +9,37 @@
             <td>{{faq.faqQuestion}}</td>
             <td>{{faq.faqAnswer}}</td>
         </tr>
-    </tbody>
+    </tbody> -->
 
 
 
 
 
-</table>
+<!-- </table> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+</head>
+<body>
+    <div class="faqbody">
+    <h2>FAQ</h2>
+<div *ngFor = "let faq of faqs" class="panel-group" id="accordion" >
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">{{faq.faqQuestion}}</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+		{{faq.faqAnswer}}
+		</div>
+      </div>
+    </div>
+</div>
+

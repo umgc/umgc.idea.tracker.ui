@@ -35,6 +35,11 @@
     h2{
         margin-top: 60px;
     }
+    .bottomtwo img{
+      width:525px;
+      margin-left: -75px;
+      
+    }
   p{
     line-height: 2;
     font-family: 'Times New Roman', Times, serif;

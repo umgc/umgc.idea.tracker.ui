@@ -1,7 +1,39 @@
 <div class="col-md-6 offset-md-3">
-    <h3>Create Employee</h3>
+    <h3>Update Proposal</h3>
     
     <form (ngSubmit) ="onSubmit()">
+        
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" class = "form-control" id = "project.user.title"
+                [(ngModel)] = "project.user.title" name ="project.user.title">
+        </div>
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" class = "form-control" id = "project.user.first_name"
+                [(ngModel)] = "project.user.first_name" name ="project.user.first_name">
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class = "form-control" id = "project.user.last_name"
+                [(ngModel)] = "project.user.last_name" name ="project.user.last_name">
+        </div>
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="text" class = "form-control" id = "project.user.phone_number"
+                [(ngModel)] = "project.user.phone_number" name ="project.user.phone_number">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" class = "form-control" id = "project.user.email"
+                [(ngModel)] = "project.user.email" name ="project.user.email">
+        </div>
+        <div class="form-group">
+            <label>User_Type</label>
+            <input type="text" class = "form-control" id = "project.user.user_type"
+                [(ngModel)] = "project.user.user_type" name ="project.user.user_type">
+        </div>
+        
         
         <div class="form-group">
             <label>Project Title</label>
