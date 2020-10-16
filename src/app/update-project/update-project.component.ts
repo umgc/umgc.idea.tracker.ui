@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Project } from '../project';
+import { project } from '../project';
 import { ProjectService } from '../project.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ProjectService } from '../project.service';
 })
 export class UpdateProjectComponent implements OnInit {
   id: number;
-  project: Project = new Project();
+  project: project = new project();
 
   constructor(private projectService: ProjectService, private route: ActivatedRoute, private router: Router) { }
 
