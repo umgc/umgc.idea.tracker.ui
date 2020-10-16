@@ -9,7 +9,7 @@ import { Faq } from './faq';
 })
 export class FaqService {
 
-  private baseURL = "http://localhost:8080/api/v1/faq"
+  private baseURL = "http://localhost:8080/cappms/FAQ"
 
   constructor(private httpClient: HttpClient) { }
 

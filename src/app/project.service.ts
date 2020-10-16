@@ -9,7 +9,7 @@ import { Project } from './project';
 })
 export class ProjectService {
 
-  private baseURL ="http://localhost:8080/api/v1/project";
+  private baseURL ="http://localhost:8080/cappms/project";
 
   constructor(private httpClient: HttpClient) { }
   getProjectsList(): Observable<Project[]>{
