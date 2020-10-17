@@ -6,6 +6,7 @@
             <th>Project Description</th>
             <th>Project Website</th>
             <th>Comment</th>
+            
             <th>Actions</th>
         </tr>
     </thead>
@@ -15,6 +16,7 @@
             <td>{{project.project_description}}</td>
             <td>{{project.project_website}}</td>
             <td>{{project.comment}}</td>
+            
             <td>
                 <button (click) = "updateProject(project.id)" class ="btn btn-info">Update</button>
                 <button (click) = "deleteProject(project.id)" class ="btn btn-danger" style="margin-left:10px">Delete</button>

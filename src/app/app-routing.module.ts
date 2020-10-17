@@ -8,11 +8,13 @@ import { LoginComponent } from './login/login.component';
 import { NewadminComponent } from './newadmin/newadmin.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { ProjectListComponent } from './project-list/project-list.component';
+import { ProposalTableComponent } from './proposal-table/proposal-table.component';
 import { UpdateProjectComponent } from './update-project/update-project.component';
 
 
 const routes: Routes = [
   {path: 'project', component: ProjectListComponent},
+  {path: 'proposal', component: ProposalTableComponent},
   {path: 'about', component: AboutComponent},
   {path: 'home', component: HomeComponent},
   {path: 'faq', component: FaqComponent},

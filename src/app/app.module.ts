@@ -13,6 +13,15 @@ import { AboutComponent } from './about/about.component';
 import { FaqComponent } from './faq/faq.component';
 import { LoginComponent } from './login/login.component';
 import { NewadminComponent } from './newadmin/newadmin.component';
+import { ProposalTableComponent } from './proposal-table/proposal-table.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { ProjectRequestComponent } from './project-request/project-request.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +35,22 @@ import { NewadminComponent } from './newadmin/newadmin.component';
     FaqComponent,
     LoginComponent,
     NewadminComponent,
+    ProposalTableComponent,
+    ProjectRequestComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatButtonModule,
+    MatCardModule,
     
   ],
   providers: [],

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Project } from '../project';
+import { project } from '../project';
 import { ProjectService } from '../project.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-create-project',
@@ -9,8 +10,13 @@ import { ProjectService } from '../project.service';
   styleUrls: ['./create-project.component.css']
 })
 export class CreateProjectComponent implements OnInit {
-
-  project: Project = new Project();
+  alert:boolean=false
+  
+  
+  project: project = new project();
+  user: User = new User();
+  
+  
 
   constructor(private projectService: ProjectService, private router: Router) { }
 
@@ -24,16 +30,27 @@ export class CreateProjectComponent implements OnInit {
     error => console.log(error));
   }
   goToProjectList(){
-    this.router.navigate(['/project']);
+    this.router.navigate(['/home']);
 
   }
 
 
   onSubmit(){
+    
+    this.project.setUser(this.user);
     console.log(this.project)
     this.saveProject();
+    this.alert=true;
+    
+    
+    
+    
+    
 
 
+  }
+  closeAlert(){
+    this.alert=false
   }
 
 }
