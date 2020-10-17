@@ -10,7 +10,9 @@ import { User } from '../user';
   styleUrls: ['./create-project.component.css']
 })
 export class CreateProjectComponent implements OnInit {
-
+  alert:boolean=false
+  
+  
   project: project = new project();
   user: User = new User();
   
@@ -38,8 +40,17 @@ export class CreateProjectComponent implements OnInit {
     this.project.setUser(this.user);
     console.log(this.project)
     this.saveProject();
+    this.alert=true;
+    
+    
+    
+    
+    
 
 
+  }
+  closeAlert(){
+    this.alert=false
   }
 
 }

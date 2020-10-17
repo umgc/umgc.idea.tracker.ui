@@ -40,6 +40,50 @@
             [(ngModel)] = "user.title" name ="title">
             
     </div>
+
+<div class="col-md-12  ">
+    <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> Your proposal has been submited successfully.
+        <button (click)="closeAlert()"type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+<form #proForm="ngForm" (ngSubmit) ="onSubmit(); proForm.reset()">
+    
+    <div class="col-md-12 form-group  form-inline " >
+        <label class="col-sm-6 col-form-label" for="first_name" >First Name: </label>
+        <input type="text" class = "form-control" id="ex3"
+            [(ngModel)] = "user.first_name" name ="first_name">
+    </div>
+    <div class="col-md-12 form-group  form-inline " >
+        <label class="col-sm-6 col-form-label" for="lastNmae" >Last Name: </label>
+        <input type="text" class = "form-control" id="ex3"
+            [(ngModel)] = "user.last_name" name ="Last_name">
+    </div>
+    <div class="col-md-12 form-group  form-inline " >
+        <label class="col-sm-6 col-form-label" for="phone_number" >Phone: </label>
+        <input type="text" class = "form-control" id="ex3"
+            [(ngModel)] = "user.phone_number" name ="phone_number">
+    </div>
+    <div class="col-md-12 form-group  form-inline " >
+        <label class="col-sm-6 col-form-label" for="email" >Email: </label>
+        <input type="text" class = "form-control" id="ex3"
+            [(ngModel)] = "user.email" name ="email">
+            
+    </div>
+    <div class="col-md-12 form-group  form-inline " >
+        <label class="col-sm-6 col-form-label" for="email" >user_type: </label>
+        <input type="text" class = "form-control" id="ex3"
+            [(ngModel)] = "user.user_type" name ="user_type">
+            
+    </div>
+    <div class="col-md-12 form-group  form-inline " >
+        <label class="col-sm-6 col-form-label" for="email" >title: </label>
+        <input type="text" class = "form-control" id="ex3"
+            [(ngModel)] = "user.title" name ="title">
+            
+    </div>
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="projectTitle" >Project Title: </label>
         <input type="text" class = "form-control" id="ex3"
