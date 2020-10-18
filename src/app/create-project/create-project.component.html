@@ -1,8 +1,11 @@
+
+
+
+
 <div class="col-md-12  ">
 
-
 <form  (ngSubmit) ="onSubmit()">
-    
+        
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="first_name" >First Name: </label>
         <input type="text" class = "form-control" id="ex3"
@@ -20,9 +23,10 @@
     </div>
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="email" >Email: </label>
-        <input type="text" class = "form-control" id="ex3"
+        <input type="email" class = "form-control" id="frm"
+        
             [(ngModel)] = "user.email" name ="email">
-            
+                    
     </div>
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="email" >user_type: </label>
@@ -60,6 +64,8 @@
     
     
   <button class="btn btn-success" type="submit">Submit</button>
+
+  
 
 </form>
 </div>
