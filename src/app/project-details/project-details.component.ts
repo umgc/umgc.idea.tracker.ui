@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { project } from '../project';
 import { ProjectService } from '../project.service';
 import { User } from '../user';
+declare const exportHTML:any;
 
 @Component({
   selector: 'app-project-details',
@@ -13,6 +14,10 @@ export class ProjectDetailsComponent implements OnInit {
 id: number
 project: project
 user:User
+
+exportHTML(){
+  exportHTML();
+}
  
   constructor(private route: ActivatedRoute, private projectService: ProjectService) { }
 
