@@ -53,8 +53,9 @@
     
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="first_name" >First Name: </label>
-        <input type="text" class = "form-control" id="ex3"
+        <input required #fname="ngModel" type="text" class = "form-control" id="ex3"
             [(ngModel)] = "user.first_name" name ="first_name">
+         <span *ngIf="fname.invalid && fname.touched" class="error">Field is Required</span>   
     </div>
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="lastNmae" >Last Name: </label>
@@ -107,7 +108,7 @@
     </div>
     
     
-  <button class="btn btn-success" type="submit">Submit</button>
+  <button [disabled]="proForm.invalid" class="btn btn-success" type="submit">Submit</button>
 
   
 
