@@ -11,6 +11,7 @@ import { ProjectService } from '../project.service';
 export class UpdateProjectComponent implements OnInit {
   id: number;
   project: project = new project();
+  status: String;
 
   constructor(private projectService: ProjectService, private route: ActivatedRoute, private router: Router) { }
 
@@ -33,4 +34,27 @@ export class UpdateProjectComponent implements OnInit {
 
     this.router.navigate(['/project']);
   }
+
+  onNameChange(val) {
+    
+    console.log("Selected status is "+ val);
+
+    
+    this.status=val;
+    switch (this.status){
+      case "2":
+        this.project.status.id = 2;
+        this.project.status.status_descr ="Approved";
+        break;
+      case "1":
+        this.project.status.id = 1;
+        this.project.status.status_descr ="Pending";
+        break;
+        case "3":
+          this.project.status.id = 3;
+          this.project.status.status_descr ="Rejected";
+          break;
+    }
+   }
+  
 }
