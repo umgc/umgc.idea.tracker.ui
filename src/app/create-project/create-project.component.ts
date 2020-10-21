@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { project } from '../project';
 import { ProjectService } from '../project.service';
+import { Status } from '../status';
 import { User } from '../user';
 
 @Component({
@@ -15,6 +16,7 @@ export class CreateProjectComponent implements OnInit {
   
   project: project = new project();
   user: User = new User();
+  status: Status = new Status();
   
   
 
@@ -23,7 +25,7 @@ export class CreateProjectComponent implements OnInit {
   ngOnInit(): void {
   }
   saveProject(){
-    this.projectService.createProject(this.project).subscribe(data =>{
+   this.projectService.createProject(this.project).subscribe(data =>{
       console.log(data);
       this.goToProjectList();
     },
@@ -36,7 +38,8 @@ export class CreateProjectComponent implements OnInit {
 
 
   onSubmit(){
-    
+    this.status.status_descr = "Pending";
+    this.project.setStatus(this.status);
     this.project.setUser(this.user);
     console.log(this.project)
     this.saveProject();
