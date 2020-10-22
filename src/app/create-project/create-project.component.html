@@ -52,6 +52,12 @@
 <form #proForm="ngForm" (ngSubmit) ="onSubmit(); proForm.reset()">
     
     <div class="col-md-12 form-group  form-inline " >
+        <label class="col-sm-6 col-form-label" for="title" >Title: </label>
+        <input type="text" class = "form-control" id="ex3"
+            [(ngModel)] = "user.title" name ="title">
+            
+    </div>
+    <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="first_name" >First Name: </label>
         <input required #fname="ngModel" type="text" class = "form-control" id="ex3"
             [(ngModel)] = "user.first_name" name ="first_name">
@@ -80,12 +86,7 @@
             [(ngModel)] = "user.user_type" name ="user_type">
             
     </div>
-    <div class="col-md-12 form-group  form-inline " >
-        <label class="col-sm-6 col-form-label" for="email" >title: </label>
-        <input type="text" class = "form-control" id="ex3"
-            [(ngModel)] = "user.title" name ="title">
-            
-    </div>
+    
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="projectTitle" >Project Title: </label>
         <input type="text" class = "form-control" id="ex3"
