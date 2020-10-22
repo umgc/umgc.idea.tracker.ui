@@ -39,6 +39,7 @@ export class CreateProjectComponent implements OnInit {
 
   onSubmit(){
     this.status.status_descr = "Pending";
+    this.status.id=1;
     this.project.setStatus(this.status);
     this.project.setUser(this.user);
     console.log(this.project)
