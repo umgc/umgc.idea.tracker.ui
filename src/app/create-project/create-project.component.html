@@ -43,7 +43,16 @@
             [(ngModel)] = "user.user_type" name ="user_type">
             
     </div> -->
-    
+    <div class="col-md-12 form-group  form-inline">
+        <label class="col-sm-6 col-form-label" for="usertypeselect">User Type</label>
+        <select [(ngModel)]="user.usr_Type.utype_descr" class="form-control" id="usertypeselect" (ngModelChange)=onUserTypeChange($event) name="usertypeselect" >
+          <option [value]="" disabled selected >Other</option>
+          <option [value]="1">Sponsor</option>
+          <option [value]="2">Liaison</option>
+          <option [value]="3">Other</option>
+        </select>
+        <!-- <input type="text" [(ngModel)]="status" (ngModelChange)="onNameChange($event)"> -->
+      </div>
     
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="projectTitle" >Project Title: </label>
