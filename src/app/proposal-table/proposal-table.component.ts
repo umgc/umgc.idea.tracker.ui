@@ -14,7 +14,7 @@ import { ProjectService } from '../project.service';
 export class ProposalTableComponent implements OnInit {
 
   projects: project[];
-  displayedColumns: string[] = ['Project Title','Project Description','Project Website', 'Comment','action','update','delete'];
+  displayedColumns: string[] = ['Project Title','Project Description','Project Website', 'Status','action','update','delete'];
 dataSource: MatTableDataSource<any>;
 
 @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
