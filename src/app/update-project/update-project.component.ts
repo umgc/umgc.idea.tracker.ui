@@ -32,7 +32,7 @@ export class UpdateProjectComponent implements OnInit {
   }
   goToProjectList(){
 
-    this.router.navigate(['/project']);
+    this.router.navigate(['/proposal']);
   }
 
   onNameChange(val) {
