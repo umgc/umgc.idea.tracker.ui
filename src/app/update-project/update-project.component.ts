@@ -12,6 +12,7 @@ export class UpdateProjectComponent implements OnInit {
   id: number;
   project: project = new project();
   status: String;
+  usr_Type: String;
 
   constructor(private projectService: ProjectService, private route: ActivatedRoute, private router: Router) { }
 
@@ -53,6 +54,28 @@ export class UpdateProjectComponent implements OnInit {
         case "3":
           this.project.status.id = 3;
           this.project.status.status_descr ="Rejected";
+          break;
+    }
+   }
+
+   onUserTypeChange(val) {
+    
+    console.log("Selected user_type is "+ val);
+
+    
+    this.usr_Type=val;
+    switch (this.usr_Type){
+      case "2":
+        this.project.user.usr_Type.id = 2;
+        this.project.user.usr_Type.utype_descr ="Liaison";
+        break;
+      case "1":
+        this.project.user.usr_Type.id = 1;
+        this.project.user.usr_Type.utype_descr ="Sponsor";
+        break;
+        case "3":
+          this.project.user.usr_Type.id = 3;
+          this.project.user.usr_Type.utype_descr ="Other";
           break;
     }
    }

@@ -1,4 +1,4 @@
-import { UsrType } from './usr-type';
+import { UsrType } from './usr_Type';
 
 describe('UsrType', () => {
   it('should create an instance', () => {

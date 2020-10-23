@@ -1,4 +1,4 @@
-import { UsrType } from './usr-type';
+import { usr_Type } from './usr_Type';
 
 export class User {
     id: number;
@@ -8,9 +8,9 @@ export class User {
     email: string;
     
     title: string;
-    UsrType: UsrType;
-    setUsrType(usrType:UsrType){
-        this.UsrType = usrType;
+    usr_Type: usr_Type;
+    setUsrType(usrType:usr_Type){
+        this.usr_Type = usrType;
     }
 
 
