@@ -24,7 +24,7 @@
         <label class="col-sm-6 col-form-label" for="lastNmae" >Last Name: </label>
         <input required #lname="ngModel" type="text" class = "form-control" id="ex3"
             [(ngModel)] = "user.last_name" name ="Last_name">
-            <span *ngIf="lname.invalid && fname.touched" class="error">Last name is required</span>  
+            <span *ngIf="lname.invalid && lname.touched" class="error">Last name is required</span>  
     </div>
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="phone_number" >Phone: </label>
@@ -35,25 +35,27 @@
         <label class="col-sm-6 col-form-label" for="email" >Email: </label>
         <input required #email="ngModel" type="text" class = "form-control" id="ex3"
             [(ngModel)] = "user.email" name ="email">
-            <span *ngIf="email.invalid && fname.touched" class="error">email is required</span>    
+            <span *ngIf="email.invalid && email.touched" class="error">email is required</span>    
     </div>
-    <div class="col-md-12 form-group  form-inline " >
+    <!-- <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="email" >user_type: </label>
         <input type="text" class = "form-control" id="ex3"
             [(ngModel)] = "user.user_type" name ="user_type">
             
-    </div>
+    </div> -->
     
     
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="projectTitle" >Project Title: </label>
-        <input type="text" class = "form-control" id="ex3"
+        <input required #ptitle="ngModel" type="text" class = "form-control" id="ex3"
             [(ngModel)] = "project.project_title" name ="project_title">
+            <span *ngIf="ptitle.invalid && ptitle.touched" class="error">Project title is required</span>    
     </div>
     <div class="col-md-12 form-group form-inline">
         <label class="col-sm-6 col-form-label" for="projectDescription">Project Description:</label>
-        <input type="text" class = "form-control" id = "project_description"
-            [(ngModel)] = "project.project_description" name ="project_description">
+        <textarea required #pdesc="ngModel" type="text" class = "form-control" id = "project_description"
+            [(ngModel)] = "project.project_description" name ="project_description"></textarea>
+            <span *ngIf="pdesc.invalid && pdesc.touched" class="error">Project description is required</span>
             <!-- <textarea  id="exampleFormControlTextarea1" rows="3" class="form-control my-2 p-2"></textarea> -->
     </div>
     <div class="col-md-12 form-group form-inline">
@@ -61,11 +63,11 @@
         <input type="text" class = "form-control" id = "project_website"
             [(ngModel)] = "project.project_website" name ="project_website">
     </div>
-    <div class="col-md-12 form-group form-inline">
+    <!-- <div class="col-md-12 form-group form-inline">
         <label class="col-sm-6 col-form-label" for="Comment">Comment:</label>
         <input type="text" class = "form-control" id = "comment"
             [(ngModel)] = "project.comment" name ="comment">
-    </div>
+    </div> -->
     
     
     
