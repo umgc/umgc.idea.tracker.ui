@@ -3,4 +3,7 @@ tbody td{
 }
 .faqbody{
     background-color: lightsteelblue;
+    text-align: left;
+    padding:25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
