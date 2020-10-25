@@ -28,12 +28,21 @@
             <input type="text" class = "form-control" id = "project.user.email"
                 [(ngModel)] = "project.user.email" name ="project.user.email">
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label>User_Type</label>
             <input type="text" class = "form-control" id = "project.user.user_type"
                 [(ngModel)] = "project.user.user_type" name ="project.user.user_type">
-        </div>
-        
+        </div> -->
+        <div class="form-group">
+            <label for="usertypeselect">User Type</label>
+            <select [(ngModel)]="project.user.usr_Type.utype_descr" class="form-control" id="usertypeselect" (ngModelChange)=onUserTypeChange($event) name="usertypeselect" >
+              <option [value]="" disabled selected >{{project.user.usr_Type.utype_descr}}</option>
+              <option [value]="1">Sponsor</option>
+              <option [value]="2">Liaison</option>
+              <option [value]="3">Other</option>
+            </select>
+            <!-- <input type="text" [(ngModel)]="status" (ngModelChange)="onNameChange($event)"> -->
+          </div>
         
         <div class="form-group">
             <label>Project Title</label>
@@ -55,6 +64,21 @@
             <input type="text" class = "form-control" id = "comment"
                 [(ngModel)] = "project.comment" name ="comment">
         </div>
+        <!-- <div class="form-group">
+            <label>Status</label>
+            <input type="text" class = "form-control" id = "project.status.status_descr"
+                [(ngModel)] = "project.status.status_descr" name ="project.status.status_descr">
+        </div> -->
+        <div class="form-group">
+            <label for="statusselect">Status</label>
+            <select [(ngModel)]="project.status.status_descr" class="form-control" id="statusselect" (ngModelChange)=onNameChange($event) name="statusSelect" >
+              <option [value]="" disabled selected >{{project.status.status_descr}}</option>
+              <option [value]="1">Pending</option>
+              <option [value]="2">Approved</option>
+              <option [value]="3">Rejected</option>
+            </select>
+            <!-- <input type="text" [(ngModel)]="status" (ngModelChange)="onNameChange($event)"> -->
+          </div>
         
       <button class="btn btn-success" type="submit">Submit</button>
     

@@ -11,6 +11,8 @@ import { ProjectService } from '../project.service';
 export class UpdateProjectComponent implements OnInit {
   id: number;
   project: project = new project();
+  status: String;
+  usr_Type: String;
 
   constructor(private projectService: ProjectService, private route: ActivatedRoute, private router: Router) { }
 
@@ -31,6 +33,51 @@ export class UpdateProjectComponent implements OnInit {
   }
   goToProjectList(){
 
-    this.router.navigate(['/project']);
+    this.router.navigate(['/proposal']);
   }
+
+  onNameChange(val) {
+    
+    console.log("Selected status is "+ val);
+
+    
+    this.status=val;
+    switch (this.status){
+      case "2":
+        this.project.status.id = 2;
+        this.project.status.status_descr ="Approved";
+        break;
+      case "1":
+        this.project.status.id = 1;
+        this.project.status.status_descr ="Pending";
+        break;
+        case "3":
+          this.project.status.id = 3;
+          this.project.status.status_descr ="Rejected";
+          break;
+    }
+   }
+
+   onUserTypeChange(val) {
+    
+    console.log("Selected user_type is "+ val);
+
+    
+    this.usr_Type=val;
+    switch (this.usr_Type){
+      case "2":
+        this.project.user.usr_Type.id = 2;
+        this.project.user.usr_Type.utype_descr ="Liaison";
+        break;
+      case "1":
+        this.project.user.usr_Type.id = 1;
+        this.project.user.usr_Type.utype_descr ="Sponsor";
+        break;
+        case "3":
+          this.project.user.usr_Type.id = 3;
+          this.project.user.usr_Type.utype_descr ="Other";
+          break;
+    }
+   }
+  
 }

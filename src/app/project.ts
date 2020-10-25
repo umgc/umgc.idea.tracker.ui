@@ -1,3 +1,4 @@
+import { Status } from './status';
 import { User } from './user';
 
 export class project {
@@ -9,7 +10,11 @@ export class project {
     user: User;
     setUser( user:User){
         this.user=user;
-        
+                
+    }
+    status: Status;
+    setStatus(status:Status){
+        this.status=status;
     }
 
 }

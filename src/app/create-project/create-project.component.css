@@ -2,3 +2,18 @@
     margin-bottom: 10px;
     margin-left:10px
 }
+input.ng-invalid{
+    
+}
+input.ng-valid{
+    
+}
+span{
+    margin-left: 223px;
+    font-size: small;
+    color: red;
+}
+button{
+    margin-left: 220px;
+    
+}
