@@ -24,6 +24,8 @@ const routes: Routes = [
   {path: "", redirectTo: 'project', pathMatch: 'full'},
   {path: 'update-project/:id', component: UpdateProjectComponent},
   {path: 'project-details/:id', component: ProjectDetailsComponent},
+  {path: 'logout', component: LoginComponent},
+
 ];
 
 @NgModule({
