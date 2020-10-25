@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProjectListComponent } from './project-list/project-list.component';
@@ -22,6 +22,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { ProjectRequestComponent } from './project-request/project-request.component';
+import { HttpInterceptorService } from './httpInterceptor.service';
+import { LogoutComponent } from './logout/logout.component';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +40,7 @@ import { ProjectRequestComponent } from './project-request/project-request.compo
     NewadminComponent,
     ProposalTableComponent,
     ProjectRequestComponent,
+    LogoutComponent,
     
   ],
   imports: [
@@ -53,7 +57,13 @@ import { ProjectRequestComponent } from './project-request/project-request.compo
     MatCardModule,
     
   ],
-  providers: [],
+  providers: [    
+    {
+    provide: HTTP_INTERCEPTORS,
+    useClass: HttpInterceptorService,
+    multi: true
+  }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
