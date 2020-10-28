@@ -13,6 +13,7 @@ export class UpdateProjectComponent implements OnInit {
   project: project = new project();
   status: String;
   usr_Type: String;
+  alert:boolean=false;
 
   constructor(private projectService: ProjectService, private route: ActivatedRoute, private router: Router) { }
 
@@ -26,10 +27,12 @@ export class UpdateProjectComponent implements OnInit {
   }
   onSubmit(){
     this.projectService.updateProject(this.id, this.project).subscribe(data =>{
-      this.goToProjectList();
-    
+ //     this.goToProjectList();
+        this.alert=true;
+        console.log("this.alert is  " + this.alert);
     }, 
     error => console.log(error));
+    
   }
   goToProjectList(){
 
@@ -79,5 +82,9 @@ export class UpdateProjectComponent implements OnInit {
           break;
     }
    }
+
+   closeAlert(){
+    this.alert=false
+  }
   
 }
