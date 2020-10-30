@@ -27,7 +27,7 @@ export class UpdateProjectComponent implements OnInit {
   }
   onSubmit(){
     this.projectService.updateProject(this.id, this.project).subscribe(data =>{
- //     this.goToProjectList();
+        this.goToProjectList();
         this.alert=true;
         console.log("this.alert is  " + this.alert);
     }, 
@@ -38,6 +38,10 @@ export class UpdateProjectComponent implements OnInit {
 
     this.router.navigate(['/proposal']);
   }
+
+  cancel(){​​​​​​​​
+    this.router.navigate(['/proposal']);
+  }​​​​​​​​
 
   onNameChange(val) {
     
@@ -86,5 +90,8 @@ export class UpdateProjectComponent implements OnInit {
    closeAlert(){
     this.alert=false
   }
+
+
+
   
 }
