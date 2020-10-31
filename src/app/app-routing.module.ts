@@ -13,15 +13,15 @@ import { UpdateProjectComponent } from './update-project/update-project.componen
 
 
 const routes: Routes = [
+  {path: 'home', component: HomeComponent},
   {path: 'project', component: ProjectListComponent},
   {path: 'proposal', component: ProposalTableComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'home', component: HomeComponent},
   {path: 'faq', component: FaqComponent},
   {path: 'login', component: LoginComponent},
   {path: 'newadmin', component: NewadminComponent},
   {path: 'create-project', component: CreateProjectComponent},
-  {path: "", redirectTo: 'project', pathMatch: 'full'},
+  {path: "", redirectTo: 'home', pathMatch: 'full'},
   {path: 'update-project/:id', component: UpdateProjectComponent},
   {path: 'project-details/:id', component: ProjectDetailsComponent},
   {path: 'logout', component: LoginComponent},
