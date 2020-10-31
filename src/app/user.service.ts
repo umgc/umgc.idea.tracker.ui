@@ -12,6 +12,7 @@ export class UserService {
   account: Account = new Account();
   private baseURL ="http://localhost:8080/api/v1/user";
   private baseURL2 ="http://localhost:8080/api/v1/createaccount";
+  private baseURL3 = "http://localhost:8080/api/v1/userbyEmail";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -28,5 +29,8 @@ export class UserService {
     return this.httpClient.post(`${this.baseURL2}`,this.account);
   }
 
-
+  getUser(email: String): Observable<Object>
+  {
+    return this.httpClient.get(`${this.baseURL3}/${email}`);
+  }
 }
