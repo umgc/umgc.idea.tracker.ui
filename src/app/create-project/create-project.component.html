@@ -10,30 +10,30 @@
     
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="title" >Title: </label>
-        <input type="text" class = "form-control" id="ex3"
+        <input type="text" class = "form-control" id="title"
             [(ngModel)] = "user.title" name ="title">
             
     </div>
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="first_name" >First Name: </label>
-        <input required #fname="ngModel" type="text" class = "form-control" id="ex3"
+        <input required #fname="ngModel" type="text" class = "form-control" id="first_name"
             [(ngModel)] = "user.first_name" name ="first_name">
          <span *ngIf="fname.invalid && fname.touched" class="error">First name is required</span>   
     </div>
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="lastNmae" >Last Name: </label>
-        <input required #lname="ngModel" type="text" class = "form-control" id="ex3"
+        <input required #lname="ngModel" type="text" class = "form-control" id="Last_name"
             [(ngModel)] = "user.last_name" name ="Last_name">
             <span *ngIf="lname.invalid && lname.touched" class="error">Last name is required</span>  
     </div>
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="phone_number" >Phone: </label>
-        <input type="text" class = "form-control" id="ex3"
+        <input type="text" class = "form-control" id="phone_number"
             [(ngModel)] = "user.phone_number" name ="phone_number">
     </div>
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="email" >Email: </label>
-        <input required #email="ngModel" type="text" class = "form-control" id="ex3"
+        <input required #email="ngModel" type="text" class = "form-control" id="email"
             [(ngModel)] = "user.email" name ="email">
             <span *ngIf="email.invalid && email.touched" class="error">email is required</span>    
     </div>
@@ -56,7 +56,7 @@
     
     <div class="col-md-12 form-group  form-inline " >
         <label class="col-sm-6 col-form-label" for="projectTitle" >Project Title: </label>
-        <input required #ptitle="ngModel" type="text" class = "form-control" id="ex3"
+        <input required #ptitle="ngModel" type="text" class = "form-control" id="project_title"
             [(ngModel)] = "project.project_title" name ="project_title">
             <span *ngIf="ptitle.invalid && ptitle.touched" class="error">Project title is required</span>    
     </div>
@@ -80,7 +80,7 @@
     
     
     
-  <button [disabled]="proForm.invalid" class="btn btn-success" type="submit">Submit</button>
+  <button [disabled]="proForm.invalid" class="btn btn-success" type="submit" id="submit">Submit</button>
   <button type="reset" class="btn btn-danger" ng-click="cancelEdit()">Cancel</button>
 
 
