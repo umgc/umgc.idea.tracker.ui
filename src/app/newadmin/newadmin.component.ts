@@ -42,8 +42,8 @@ export class NewadminComponent implements OnInit {
   saveAdminUser(){
       this.userService.createUser(this.user).subscribe(data =>{
         console.log("saveAdminUser");
-        this.user = data as User;
-        this.account.user_id = this.user.id;
+        this.tempUser = data as User;
+        this.account.user_id = this.tempUser.id;
         this.saveAccount();
       },
      error => console.log(error));
@@ -83,7 +83,7 @@ export class NewadminComponent implements OnInit {
       if(this.tempUser === null)
       {
         console.log("saving user ");
-        //this.saveAdminUser();
+        this.saveAdminUser();
       }
       else
       {
